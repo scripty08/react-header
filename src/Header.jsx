@@ -16,7 +16,8 @@ export const Header = (props) => {
         userMenuRoutes,
         user,
         layout,
-        showBreadcrumbs
+        showBreadcrumbs,
+        logo
     } = props;
 
     let colLayout = {
@@ -67,7 +68,7 @@ export const Header = (props) => {
         <header className={'header'}>
             <Row>
                 <Col {...colLayout.logo}>
-                    <div className={'logo'}>LOGO</div>
+                    <div className={'logo'}>{logo}</div>
                 </Col>
                 <Col {...colLayout.flyout}>
                     <FlyoutWithIcons routes={routes} selectedKeys={selectedKeys} onClick={onClick}/>
@@ -90,6 +91,7 @@ Header.defaultProps = {
     user: { loggedIn: false },
     layout: 'fullpage',
     showBreadcrumbs: false,
+    logo: 'Logo',
 };
 
 Header.propTypes = {
@@ -100,4 +102,5 @@ Header.propTypes = {
     onClick: PropTypes.func,
     layout: PropTypes.string,
     showBreadcrumbs: PropTypes.bool,
+    logo: PropTypes.oneOfType(PropTypes.object, PropTypes.string),
 };

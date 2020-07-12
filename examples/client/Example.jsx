@@ -96,6 +96,7 @@ export const Example = () => {
                 selectedKeys={selectedKeys}
                 onClick={onClick}
                 showBreadcrumbs={true}
+                logo={'Awsome Logo'}
             />
             <br /><br /><br /><br /><br />
             <h2>Sized Header</h2>
@@ -107,6 +108,7 @@ export const Example = () => {
                 onClick={onClick}
                 layout={'sized'}
                 showBreadcrumbs={true}
+                logo={<div>Your Logo</div>}
             />
             <br /><br /><br /><br /><br />
             <h2>Sized Header without Breadcrumbs</h2>
@@ -117,6 +119,7 @@ export const Example = () => {
                 selectedKeys={selectedKeys}
                 onClick={onClick}
                 layout={'sized'}
+                logo={'Logo'}
             />
         </Router>
     );
