@@ -3,7 +3,7 @@
 # Description
 
 lightweight react header component. It has full working flyout navigation, user menu and breadcrumbs with
-appropriate highlighting. Install and enjoy aplying your styles to the header.
+appropriate highlighting. Install and enjoy applying your styles to the header.
 
 ![alt text](./header.png "@scripty/react-header")
 
