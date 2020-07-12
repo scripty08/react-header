@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #dedede;
+
+    .logo {
+        height: 59px;
+        padding: 20px 16px 23px 20px;
+        font-size: 27px;
+        font-weight: 900;
+        min-width: 170px;
+    }
+
+    .breadcrumbs-container {
+        width: 100%;
+        border-bottom: 1px solid #dedede;
+        padding-top: 2px;
+        .breadcrumbs {
+            background: transparent;
+            border: 0;
+        }
+    }
+}
