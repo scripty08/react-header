@@ -25,10 +25,10 @@ export const Header = (props) => {
             xs: 2, sm: 2, md: 2, lg: 2, xl: 2
         },
         flyout: {
-            xs: 10, sm: 10, md: 10, lg: 10, xl: 9
+            xs: { span: 0 }, sm: { span: 0 }, md: { span: 0 }, lg: 9, xl: 9
         },
         extra: {
-            xs: 10, sm: 10, md: 10, lg: 10, xl: 1
+            xs: { span: 0 }, sm: { span: 0 }, md: { span: 0 }, lg: 1, xl: 1
         },
         breadcrumbs: {
             xs: 12, sm: 12, md: 12, lg: 12, xl: 12
@@ -38,16 +38,16 @@ export const Header = (props) => {
     if (layout === 'sized') {
         colLayout = {
             logo: {
-                xs: 2, sm: 2, md: 2, lg: 2, xl: { span: 1, offset: 2 }
+                xs: 2, sm: 2, md: 2, lg: 2, xl: { span: 1, offset: 1 }
             },
             flyout: {
-                xs: 10, sm: 10, md: 10, lg: 10, xl: { span: 5, offset: 1 }
+                xs: { span: 0 }, sm: { span: 0 }, md: { span: 0 }, lg: { span: 0 }, xl: { span: 5, offset: 1 }
             },
             extra: {
-                xs: 10, sm: 10, md: 10, lg: 10, xl: { span: 1, offset: 0 }
+                xs: { span: 0 }, sm: { span: 0 }, md: { span: 0 }, lg: 10, xl: { span: 1, offset: 2 }
             },
             breadcrumbs: {
-                xs: 12, sm: 12, md: 12, lg: 12, xl: { span: 8, offset: 2 }
+                xs: 12, sm: 12, md: 12, lg: 12, xl: { span: 8, offset: 1 }
             }
         };
     }
@@ -73,9 +73,11 @@ export const Header = (props) => {
                 <Col {...colLayout.flyout}>
                     <FlyoutWithIcons routes={routes} selectedKeys={selectedKeys} onClick={onClick}/>
                 </Col>
-                <Col {...colLayout.extra}>
+                <Col {...colLayout.extra} >
+                    <div className={'extra'}>
                     <FlyoutUserWithIcons loginPath={'/login'} user={user} routes={userMenuRoutes} selectedKeys={selectedKeys}
                                          onClick={onClick}/>
+                    </div>
                 </Col>
             </Row>
             {getBreadcrumbs()}
